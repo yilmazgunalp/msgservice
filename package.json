@@ -1,0 +1,25 @@
+{
+  "name": "msgservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yilmazgunalp/msgservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yilmazgunalp/msgservice/issues"
+  },
+  "homepage": "https://github.com/yilmazgunalp/msgservice#readme",
+  "dependencies": {
+    "folktale": "^2.3.1",
+    "mongoose": "5.4.4",
+    "wsserver": "git+https://github.com/yilmazgunalp/wsserver.git"
+  }
+}
