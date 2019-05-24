@@ -1,17 +1,18 @@
 const Conversation = require('./message');
 const ConversationService = require('./message.service')(Conversation);
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/userdb');
+mongoose.connect('mongodb://mongo/msgdb');
 const {safeJSONParse,readHttpHeader,cookiesToJson} = require('../modules/util.js')
 const sessions = require('../modules/session');
 
 const Master = require('wsserver');
 
-const setSocketID = (header) => {
-  let session_id = cookiesToJson(header.Cookie).session_id;
+const setSocketID = (session_id) => {
+  //let session_id = cookiesToJson(header.Cookie).session_id;
   let user =  sessions.retrieve(session_id);
   return user.sub
 }
+
 
 const handleMessage = (msg) => {
   ConversationService.create(msg).then(msg => console.log( msg,'FROM MESSAGE'))

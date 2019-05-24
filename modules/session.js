@@ -8,7 +8,8 @@ const create = ({req,resp,user}) => {
 };
 
 const retrieve = (session_id)=> {
-  return jwt.verifyToken(session_id);
+  console.log( 'session_id', session_id)
+  return jwt.verifyToken(session_id.toString());
 };
 
 module.exports = {create,retrieve};

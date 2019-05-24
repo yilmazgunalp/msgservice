@@ -8,6 +8,7 @@ const MessageSchema = new mongoose.Schema({
     body: {type: String,required: true},
 })
 
+
 const ConversationSchema = new mongoose.Schema({
     between: String,
     messages: [MessageSchema]

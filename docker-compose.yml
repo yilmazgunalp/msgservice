@@ -1,0 +1,18 @@
+version: '3'
+services:
+    mongo:
+        image: "mongo"
+        ports:
+            - "27018:27017"
+    web:
+        image: "yilmazgunalp/nodev10:2.0"
+        environment:
+          - NODE_ENV
+        volumes:
+            - ".:/msg"
+        ports:
+            - "4040:4040"
+        command: "npm start"
+        working_dir: /msg
+        depends_on:
+            - "mongo"
