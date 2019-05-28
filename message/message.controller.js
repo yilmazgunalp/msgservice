@@ -1,7 +1,7 @@
 const Conversation = require('./message');
 const ConversationService = require('./message.service')(Conversation);
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://msgDB:27027/msgdb');
+mongoose.connect('mongodb://msgDB:27027/msgdb').catch(e => console.log('Mongo couldnt connect'));
 const {safeJSONParse,readHttpHeader,cookiesToJson} = require('../modules/util.js')
 const sessions = require('../modules/session');
 
