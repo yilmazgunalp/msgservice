@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh 'npm install'
         sh 'echo hello world'
+        sh 'echo hello Jenkins'
       }
     }
 }
