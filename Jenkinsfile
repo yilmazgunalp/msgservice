@@ -1,5 +1,6 @@
 pipeline {
   agent none
+  triggers { upstream(upstreamProjects: '../wss/master', threshold: hudson.model.Result.SUCCESS)}
   stages {
     stage('Build') {
   agent {
