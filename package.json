@@ -19,7 +19,7 @@
   "homepage": "https://github.com/yilmazgunalp/msgservice#readme",
   "dependencies": {
     "folktale": "^2.3.1",
-    "mongoose": "5.4.4",
+    "mongoose": "5.7.5",
     "wsserver": "git+https://github.com/yilmazgunalp/wsserver.git",
     "nodemon": "^1.19.0"
   },
